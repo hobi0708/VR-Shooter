@@ -1,0 +1,29 @@
+{
+    "DodgeAgent": {
+        "checkpoints": [
+            {
+                "steps": 64,
+                "file_path": "results\\dodge_training_7\\DodgeAgent\\DodgeAgent-64.onnx",
+                "reward": null,
+                "creation_time": 1743887132.9370708,
+                "auxillary_file_paths": [
+                    "results\\dodge_training_7\\DodgeAgent\\DodgeAgent-64.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 64,
+            "file_path": "results\\dodge_training_7\\DodgeAgent.onnx",
+            "reward": null,
+            "creation_time": 1743887132.9370708,
+            "auxillary_file_paths": [
+                "results\\dodge_training_7\\DodgeAgent\\DodgeAgent-64.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.6.0+cpu"
+    }
+}

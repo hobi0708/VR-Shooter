@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1743888207",
+        "python_version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Artem Bobrov\\Desktop\\GitHubRepos\\VR-Shooter\\ml-agents-env\\Scripts\\mlagents-learn Assets/\\Configs/dodge_config.yaml --run-id=dodgeAgentTraining",
+        "mlagents_version": "1.1.0",
+        "mlagents_envs_version": "1.1.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.6.0+cpu",
+        "numpy_version": "1.23.5",
+        "end_time_seconds": "1743888217"
+    },
+    "total": 10.554244700004347,
+    "count": 1,
+    "self": 0.009980899863876402,
+    "children": {
+        "run_training.setup": {
+            "total": 0.1432934000622481,
+            "count": 1,
+            "self": 0.1432934000622481
+        },
+        "TrainerController.start_learning": {
+            "total": 10.400970400078222,
+            "count": 1,
+            "self": 0.00046230002772063017,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 10.400494400062598,
+                    "count": 1,
+                    "self": 10.400494400062598
+                },
+                "trainer_threads": {
+                    "total": 1.600012183189392e-06,
+                    "count": 1,
+                    "self": 1.600012183189392e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 1.209997572004795e-05,
+                    "count": 1,
+                    "self": 1.209997572004795e-05
+                }
+            }
+        }
+    }
+}
