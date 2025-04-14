@@ -4,15 +4,19 @@ using UnityEngine;
 public class Preset : MonoBehaviour
 {
     public List<GameObject> targets;
-    
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    // Call this method with positive or negative values to change speed
+    public void AdjustSpeed(float amount)
     {
-        
+        foreach (GameObject target in targets)
+        {
+            MoveBackAndForth mover = target.GetComponent<MoveBackAndForth>();
+            if (mover != null)
+            {
+                mover.speed += amount;
+                // Optional: clamp to prevent negative speed
+                mover.speed = Mathf.Max(0f, mover.speed);
+            }
+        }
     }
 }

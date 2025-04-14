@@ -6,11 +6,6 @@ public class TrainingController : MonoBehaviour
     public List<GameObject> presets;
     private int currentPresetIndex = 0;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         // Example: Press 'N' to go to next preset
@@ -50,6 +45,19 @@ public class TrainingController : MonoBehaviour
         for (int i = 0; i < presets.Count; i++)
         {
             presets[i].SetActive(i == currentPresetIndex);
+        }
+    }
+
+    // ✅ This is the new method to call speed adjustment on each preset
+    public void AdjustSpeedForAllPresets(float amount)
+    {
+        foreach (GameObject presetObject in presets)
+        {
+            Preset preset = presetObject.GetComponent<Preset>();
+            if (preset != null)
+            {
+                preset.AdjustSpeed(amount);
+            }
         }
     }
 }
