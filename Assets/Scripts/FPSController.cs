@@ -26,8 +26,12 @@ public class FPSController : MonoBehaviour
     private float gravity = -9.81f;
     private bool isGrounded;
 
+    public bool canShoot;
+    public GameObject gun;
+
     void Start()
     {
+        canShoot = false;
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -36,7 +40,21 @@ public class FPSController : MonoBehaviour
     {
         HandleMovement();
         HandleCameraRotation();
+        
+        if(canShoot)
         HandleShooting();
+
+
+        if (canShoot)
+        {
+            //gun.GetComponent<MeshRenderer>().enabled = true;
+            gun.SetActive(true);
+        }
+        else
+        {
+            //gun.GetComponent<MeshRenderer>().enabled = false;
+            gun.SetActive(false);
+        }
     }
 
     void HandleMovement()
@@ -98,5 +116,10 @@ public class FPSController : MonoBehaviour
         
         // Optional: Destroy bullet after 5 seconds to prevent clutter
         Destroy(bullet, 5f);
+    }
+
+    public bool AllowShooting()
+    {
+        return canShoot = true;
     }
 }

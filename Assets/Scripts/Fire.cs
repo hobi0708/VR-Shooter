@@ -20,7 +20,7 @@ public class Fire : MonoBehaviour
     public void FireBullet()
     {
         GameObject spawnBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
-        spawnBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * bulletSpeed;
+        spawnBullet.GetComponent<Rigidbody>().linearVelocity = spawnPoint.forward * bulletSpeed;
         Destroy(spawnBullet, 5f);
 
         if (gunshotSound != null && audioSource != null)
